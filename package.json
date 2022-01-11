@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "babel-loader": "8.0.6",
     "prop-types": "latest",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-scripts": "3.1.1"
+    "react-scripts": "3.1.1",
+    "webpack": "4.39.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -32,11 +34,11 @@
     ]
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^5.1.11",
-    "@storybook/addon-links": "^5.1.11",
-    "@storybook/addon-storyshots": "^5.1.11",
-    "@storybook/addons": "^5.1.11",
-    "@storybook/react": "^5.1.11",
+    "@storybook/addon-actions": "^6.4.12",
+    "@storybook/addon-links": "^6.4.12",
+    "@storybook/addon-storyshots": "^6.4.12",
+    "@storybook/addons": "^6.4.12",
+    "@storybook/react": "^6.4.12",
     "babel-plugin-macros": "^2.6.1",
     "react-test-renderer": "^16.9.0",
     "require-context.macro": "^1.1.1"
