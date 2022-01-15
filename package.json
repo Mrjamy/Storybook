@@ -13,7 +13,8 @@
     "webpack": "4.39.1"
   },
   "scripts": {
-    "storybook": "start-storybook -p 9009 -s public",
+    "storybook": "start-storybook -p 9010 -s public",
+    "sb": "yarn storybook",
     "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {
@@ -32,11 +33,11 @@
     ]
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^6.4.12",
-    "@storybook/addon-links": "^6.4.12",
-    "@storybook/addon-storyshots": "^6.4.12",
-    "@storybook/addons": "^6.4.12",
-    "@storybook/react": "^6.4.12",
+    "@storybook/addon-actions": "^6.4.13",
+    "@storybook/addon-links": "^6.4.13",
+    "@storybook/addon-storyshots": "^6.4.13",
+    "@storybook/addons": "^6.4.13",
+    "@storybook/react": "^6.4.13",
     "babel-plugin-macros": "^2.6.1",
     "react-test-renderer": "^16.9.0",
     "require-context.macro": "^1.1.1"
