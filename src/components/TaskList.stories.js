@@ -3,14 +3,16 @@ import React from 'react';
 import TaskList from './TaskList';
 import { task, actions } from './Task.stories';
 
-export const defaultTasks = [
-    {...task, id: '1', title: 'Task 1'},
-    {...task, id: '2', title: 'Task 2'},
-    {...task, id: '3', title: 'Task 3'},
-    {...task, id: '4', title: 'Task 4'},
-    {...task, id: '5', title: 'Task 5'},
-    {...task, id: '6', title: 'Task 6'},
-];
+export const listGenerator = (count = 6) => {
+    const rows = [];
+    for (let i = 1; i < count+1; i++) {
+        rows.push({...task, id: i, title: `Task ${i}`})
+    }
+
+    return rows;
+}
+
+export const defaultTasks = listGenerator();
 
 export const withPinnedTasks = [
     ...defaultTasks.slice(0, 5),
@@ -20,7 +22,7 @@ export const withPinnedTasks = [
 export default {
     title: 'TaskList',
     decorators: [(story) => <div style={{padding: '3rem'}}>{story()}</div>],
-    excludeStories: ['defaultTasks', 'withPinnedTasks'],
+    excludeStories: ['defaultTasks', 'listGenerator', 'withPinnedTasks'],
 };
 
 export const Default = () => <TaskList tasks={defaultTasks} {...actions} />;
@@ -35,7 +37,7 @@ WithPinnedTasks.story = {
     name: 'withPinnedTasks',
 };
 
-export const Loading = () => <TaskList loading tasks={[]} {...actions} />;
+export const Loading = () => <TaskList loading tasks={defaultTasks} {...actions} />;
 
 Loading.story = {
     name: 'loading',

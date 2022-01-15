@@ -13,20 +13,15 @@ function TaskList({ loading, tasks, onPinTask, onArchiveTask }) {
         <div className="loading-item">
             <span className="glow-checkbox" />
             <span className="glow-text">
-        <span>Loading</span> <span>cool</span> <span>state</span>
-      </span>
+                <span>Loading</span> <span>cool</span> <span>state</span>
+            </span>
         </div>
     );
 
-    if (loading) {
+    if (tasks.length > 0 && loading) {
         return (
             <div className="list-items">
-                {LoadingRow}
-                {LoadingRow}
-                {LoadingRow}
-                {LoadingRow}
-                {LoadingRow}
-                {LoadingRow}
+                {tasks.map(() => LoadingRow)}
             </div>
         );
     }
